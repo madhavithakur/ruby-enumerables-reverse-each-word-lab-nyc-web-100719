@@ -3,11 +3,12 @@ def reverse_each_word(sentence)
   words = sentence.split(" ")
   result = []
   
-  words.each do |word|
-   result << word.reverse 
+  words.collect{ |word| result << word.reverse }
  end 
  result.join(" ")
 end 
+
+#a.collect { |x| x + "!" }         #=> ["a!", "b!", "c!", "d!"]
 
 # describe '#reverse_each_word' do
 #   let(:sentence1) { "Hello there, and how are you?" }
